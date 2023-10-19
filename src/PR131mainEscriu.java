@@ -12,10 +12,13 @@ public class PR131mainEscriu implements Serializable {
         try {
             DataOutputStream dos = new DataOutputStream(new FileOutputStream(hashmap.getNombreArchivo()));
             writeSerializableObject(hashmap, dos);
+            dos.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-
+        
         
     }
 

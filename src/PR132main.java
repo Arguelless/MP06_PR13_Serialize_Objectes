@@ -31,11 +31,11 @@ public class PR132main implements Serializable {
             DataOutputStream dos = new DataOutputStream(new FileOutputStream("PR132People.dat"));
             writeSerializableObject(persones, dos);
             System.out.println("Objecte serialitzat correctament");
+            dos.close();
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
         try {
             DataInputStream dis = new DataInputStream(new FileInputStream("PR132People.dat"));
             ArrayList<PR132Persona> obj = (ArrayList<PR132Persona>) readSerializableObject(dis);
@@ -45,6 +45,7 @@ public class PR132main implements Serializable {
                 System.out.format(formatInfo, persona.getNom(),persona.getCognom(),persona.getEdat());
                 System.out.println();
             }
+            dis.close();
 
         } catch (IOException e) {
             // TODO Auto-generated catch block

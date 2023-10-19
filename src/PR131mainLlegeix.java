@@ -25,7 +25,10 @@ public class PR131mainLlegeix implements Serializable {
                 System.out.println("Clave: " + key + ", Valor: " + value);
             }
             System.out.println(obj.getPersones());
+            dis.close();
         } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

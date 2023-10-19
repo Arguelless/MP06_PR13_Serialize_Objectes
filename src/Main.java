@@ -25,6 +25,7 @@ public class Main {
                     case 1: PR131mainEscriu.main(args);
                             PR131mainLlegeix.main(args);
                     break;
+                    case 2: PR132main.main(args); break;
                     
                     // Adapta aquí les altres classes de l’exercici (PR122cat…)
                     case 100: running = false; break;
