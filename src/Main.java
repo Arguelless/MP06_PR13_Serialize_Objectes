@@ -11,8 +11,10 @@ public class Main {
         boolean running = true;
         while (running) {
             String menu = "Escull una opció:";
-            menu = menu + "\n 0) PR120ReadFile";
-            menu = menu + "\n 1) PR121Files";
+            menu = menu + "\n 0) PR130mainPersonesHashmap";
+            menu = menu + "\n 1) PR131mainEscriu, PR131mainLlegeix";
+            menu = menu + "\n 2) PR132main";
+            menu = menu + "\n 3) PR133mainTreballadors";
             // Adapta aquí les altres classes de l’exercici (PR122cat…)
             menu = menu + "\n 100) Sortir";
             System.out.println(menu);
@@ -26,6 +28,7 @@ public class Main {
                             PR131mainLlegeix.main(args);
                     break;
                     case 2: PR132main.main(args); break;
+                    case 3: PR133mainTreballadors.main(args); break;
                     
                     // Adapta aquí les altres classes de l’exercici (PR122cat…)
                     case 100: running = false; break;
