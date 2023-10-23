@@ -9,7 +9,7 @@ public class PR134Estudiants {
         try (RandomAccessFile raf = new RandomAccessFile("./src/estudiants.dat", "rw")) {
             raf.setLength(0);
             // Afegir estudiants
-            afegirEstudiant(raf, 1, "Eric Casas", 9.3f);
+            afegirEstudiant(raf, 1, "Marc Arguelles", 9.3f);
             afegirEstudiant(raf, 2, "Eric Casas", 9.3f);
 
             // Consultar i mostrar els videojocs afegits
@@ -43,14 +43,14 @@ public class PR134Estudiants {
 
     public static String consultarNota(RandomAccessFile raf, int id) throws Exception {
         raf.seek(getSeekPosition(id));
-        int readId = raf.readInt();
+        raf.readInt();
     
         char[] chars = new char[NAME_SIZE];
         for (int i = 0; i < NAME_SIZE; i++) {
             chars[i] = raf.readChar();
         }
         float nota = raf.readFloat();
-        return readId + ": " + new String(chars).trim() + " -> " + nota;
+        return new String(chars).trim() + " -> " + nota;
     }
 
     public static void actualitzarNotaEstudiant(RandomAccessFile raf, int id, float novaNota) throws Exception {
